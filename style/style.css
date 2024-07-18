@@ -56,10 +56,20 @@ body {
   padding: 0 150px;
 }
 .habit {
-  max-width: 1440px;
   background: #111111;
 }
-
+.habit-property{
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-bottom: 6.25rem;
+}
+.uniqe{
+  background: #111111;
+}
+.uniqe-container{
+  max-width: 1440px;
+  margin: 0 auto;
+}
 /* ----------------------------------Head---------------------------------- */
 .head {
   /* border: 1px solid red; */
@@ -276,8 +286,89 @@ body {
   font-size: 3rem;
   text-align: center;
 }
+.habit-des {
+  color: var(--secondary-color);
+  text-align: center;
+  font-weight: 25rem;
+  line-height: 1.5rem;
+  font-family: var(--primary-font);
+  margin-bottom: 55px;
+}
+
+/* Card */
+.habit-card {
+   /*border: 1px solid tomato; */
+  max-width: 14.4rem;
+  height: 17.125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.habit-card img {
+  border: 4px solid rgba(255, 255, 255, 0.10);
+  border-radius: 90px;
+}
+.habit-card h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: var(--primary-font);
+  text-align: center;
+}
+.habit-card p {
+  font-family: var(--primary-font);
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+
+.habit-card-conianer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+  row-gap: 30px;
+}
+
+/* ---------------------------------Uniqe Section--------------------------------- */
+.uniqe-container h3{
+  color: #fff;
+  font-family: var(--primary-font);
+  font-weight: 800;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.uniqe-container p{
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--primary-font);
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  padding-bottom: 28px;
+  text-align: center;
+}
+#uuu{
+  width: 300px;
+}
+#uuu>img{
+  width: 100%;
+}
+.uniqe-card{
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+/* ----------------------------Media Query---------------------------- */
 
 @media screen and (max-width: 576px) {
+  body{
+    object-fit: contain;
+    object-position: center;
+  }
   .banner,
   .navbar {
     padding: 0;
@@ -289,12 +380,16 @@ body {
   .menu {
     display: block;
   }
+  .head{
+    width: 100%;
+  }
   .navbar {
     flex-direction: row-reverse;
     padding-top: 50px;
-    max-width: 339px;
+    max-width: 340px;
     height: 100%;
     margin: 0 auto;
+    padding: calc(340px - 335px);
   }
   .banner-left {
     max-width: 353px;
@@ -326,4 +421,12 @@ body {
     top: 370px;
     left: -20px;
   }
+
+
+  /* Habit */
+  .habit-card-conianer{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+
 }

@@ -255,7 +255,7 @@ body {
 
 /* -----------------------------> Change Habit */
 .habit-property {
-  /* border: 1px solid green; */
+  /* border: 10px solid green; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -303,13 +303,6 @@ body {
 }
 
 /* Card Container */
-.habit-card-conianer {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  align-items: center;
-  justify-items: center;
-  row-gap: 30px;
-}
 
 /* ----------------------------------Media Query---------------------------------- */
 @media screen and (max-width: 576px) {
@@ -376,7 +369,8 @@ body {
     /* ------Habit Section------ */
     .habit-card-conianer {
       display: grid;
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(3, 300px);
+      grid-template-rows: repeat(2, 300px);
     }
   }
 }

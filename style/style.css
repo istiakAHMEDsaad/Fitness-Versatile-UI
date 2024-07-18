@@ -245,13 +245,16 @@ body {
 /* ----------------------------------Media Query---------------------------------- */
 @media screen and (max-width: 576px) {
   .head{
-    /* border: 2px solid tomato; */
+    border: 2px solid tomato;
     margin: 0 auto;
     height: 1035px;
     padding: 10px 20px;
+    width: 100%;
   }
     .navbar {
     flex-direction: row-reverse;
+    padding-right: 15px;
+    /* width: 100%; */
   }
   .nav-btn {
     display: none;
@@ -261,10 +264,12 @@ body {
     display: block;
   }
   .banner {
+    width: 100%;
+    /* padding: auto; */
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    margin-left: 15px;
+    justify-content: space-between;
+    /* margin-left: 15px; */
   }
   .banner-left{
     max-width: 400px;
@@ -272,7 +277,7 @@ body {
   .banner-title{
     font-size: 36px;
     line-height: 50px;
-    padding-left: 10px;
+    /* padding-left: 10px; */
   }
   #glass1{
     position: relative;
@@ -285,6 +290,7 @@ body {
   }
   .banner-left p{
     padding-left: 10px;
+    width: 100%;
   }
   .banner-button{
     padding-left: 10px;

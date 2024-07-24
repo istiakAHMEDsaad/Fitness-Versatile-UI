@@ -9,12 +9,16 @@
   display: none;
 }
 
+@font-face {
+  font-family: miamaFonts;
+  src: url(../fonts/Miama.ttf);
+}
 /* ----------------------------------Custom CSS Property---------------------------------- */
 :root {
   --primary-color: rgba(230, 83, 60, 1);
   --primary-font: "Inter", sans-serif;
   --secondary-color: rgba(255, 255, 255, 0.5);
-  --font-miama: "Miama", sans-serif;
+  --font-miama: "Miama", sans-serif, Arial;
 }
 * {
   margin: 0;
@@ -55,18 +59,23 @@ body {
   margin: 0 auto;
   padding: 0 150px;
 }
+
+.run,
 .habit {
   background: #111111;
 }
-.habit-property{
+
+.run-container,
+.uniqe-container,
+.habit-property {
   max-width: 1440px;
   margin: 0 auto;
   padding-bottom: 6.25rem;
 }
-.uniqe{
+.uniqe {
   background: #111111;
 }
-.uniqe-container{
+.uniqe-container {
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -159,16 +168,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-/* #glass2{
-  position: fixed;
-  padding: 0 8px;
-  bottom: 280px;
-  right: 120px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-} */
+
 #glass1 h2 {
   font-size: 2.5rem;
   font-weight: 900;
@@ -269,12 +269,13 @@ body {
   cursor: pointer;
 }
 .banner-title #shape {
-  font-family: var(--font-miama);
+  /* font-family: var(--font-miama); */
+  font-family: miamaFonts, Arial;
   font-size: 7rem;
   font-weight: 400;
 }
 
-.habit-property{
+.habit-property {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -297,7 +298,7 @@ body {
 
 /* Card */
 .habit-card {
-   /*border: 1px solid tomato; */
+  /*border: 1px solid tomato; */
   max-width: 14.4rem;
   height: 17.125rem;
   display: flex;
@@ -306,7 +307,7 @@ body {
   justify-content: space-between;
 }
 .habit-card img {
-  border: 4px solid rgba(255, 255, 255, 0.10);
+  border: 4px solid rgba(255, 255, 255, 0.1);
   border-radius: 90px;
 }
 .habit-card h3 {
@@ -322,7 +323,6 @@ body {
   text-align: center;
 }
 
-
 .habit-card-conianer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -332,40 +332,120 @@ body {
 }
 
 /* ---------------------------------Uniqe Section--------------------------------- */
-.uniqe-container h3{
+.uniqe-container h3 {
   color: #fff;
   font-family: var(--primary-font);
   font-weight: 800;
-  font-size: 3rem;
+  font-size: 2.8rem;
   text-align: center;
   margin-bottom: 10px;
 }
-
-.uniqe-container p{
-  color: rgba(255, 255, 255, 0.5);
+.uniqe-container p {
+  color: var(--secondary-color);
+  text-align: center;
+  font-weight: 25rem;
+  line-height: 1.5rem;
   font-family: var(--primary-font);
-  line-height: 20px;
-  letter-spacing: 0.5px;
-  padding-bottom: 28px;
+  margin-bottom: 20px;
+}
+.uniqe-card > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.uniqe-card img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
+.uniqe-card {
+  /* border: 3px solid tomato; */
+  max-width: 75%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 18.75rem);
+  grid-template-rows: repeat(2, 18.75rem);
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+#uuu {
+  object-fit: cover;
+  object-position: right;
+}
+
+/* ----------------------------Run an extra mile section */
+/* Left Section */
+.run-container-content{
+  border: 3px solid tomato;
+  margin: 0 auto;
+  max-width: 68.75rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.run-left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.run-left h1{
+  color: #fff;
+  font-family: var(--primary-font);
+  font-weight: 900;
+  font-size: 3rem;
   text-align: center;
 }
-#uuu{
-  width: 300px;
+.run-left p{
+  font-family: var(--primary-font);
+  color: var(--secondary-color);
+  text-align: center;
 }
-#uuu>img{
-  width: 100%;
+.run-left button{
+  width: 14rem;
+  height: 3.375rem;
+  border-radius: 1.6875rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
 }
-.uniqe-card{
-  border: 1px solid black;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+/* Right section */
+.run-right{
+  /* border: 1px solid tomato; */
+  /* width: 400px;
+  height: 300px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.run-right img{
+  width: 400px;
+  height: 300px;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+
 
 /* ----------------------------Media Query---------------------------- */
 
 @media screen and (max-width: 576px) {
-  body{
+  body {
     object-fit: contain;
     object-position: center;
   }
@@ -380,7 +460,7 @@ body {
   .menu {
     display: block;
   }
-  .head{
+  .head {
     width: 100%;
   }
   .navbar {
@@ -422,11 +502,18 @@ body {
     left: -20px;
   }
 
-
   /* Habit */
-  .habit-card-conianer{
+  .habit-card-conianer {
     grid-template-columns: repeat(1, 1fr);
   }
 
-
+  /* Unique Section Part */
+  /* .uniqe-card > div{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  } */
+  .uniqe-card {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

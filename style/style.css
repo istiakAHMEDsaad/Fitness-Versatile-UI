@@ -60,6 +60,7 @@ body {
   padding: 0 150px;
 }
 
+.our-team,
 .calculator-title,
 .uniqe,
 .training,
@@ -68,6 +69,7 @@ body {
   background: #111111;
 }
 
+.our-team-container,
 .calculator-title-container,
 .training-container,
 .run-container,
@@ -347,11 +349,13 @@ body {
   font-family: var(--primary-font);
   margin-bottom: 20px;
 }
+/* .our-team-card > div, */
 .uniqe-card > div {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+/* .our-team-card img, */
 .uniqe-card img {
   height: 300px;
   width: 300px;
@@ -634,6 +638,124 @@ body {
   color: rgba(255, 255, 255, 1);
 }
 
+/* ----------------------------Our Team Section---------------------------- */
+.our-team-title h3 {
+  color: #fff;
+  font-family: var(--primary-font);
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 14px;
+}
+.our-team-title p {
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  font-family: var(--primary-font);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  margin-bottom: 55px;
+}
+
+.our-team-card > div p {
+  color: #fff;
+  font-family: var(--primary-font);
+  font-size: 20px;
+  font-weight: 900;
+}
+.our-team-card > div span {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--primary-font);
+  font-size: 14px;
+  font-weight: 400;
+}
+.our-team-card > div p {
+  padding-left: 15px;
+}
+.our-team-card > div span {
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+.our-team-card {
+  margin: 0 auto;
+  max-width: 66.25rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  display: grid;
+  grid-template-rows: repeat(2, 270px);
+  grid-template-columns: repeat(3, 320px);
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  gap: 20px;
+}
+.our-team-img {
+  width: 100%;
+  border-radius: 18px;
+  background-position: center;
+  background-size: cover;
+}
+
+.team1 {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    url(../assets/trainer1.png) lightgray 50% / cover no-repeat;
+}
+.team2 {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    url(../assets/trainer2.png) lightgray 50% / cover no-repeat;
+}
+.team3 {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    url(../assets/trainer3.png) lightgray 50% / cover no-repeat;
+}
+.team4 {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    url(../assets/trainer4.png) lightgray 50% / cover no-repeat;
+}
+.team5 {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    url(../assets/trainer5.png) lightgray 50% / cover no-repeat;
+}
+.team6 {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    url(../assets/trainer6.png) lightgray 50% / cover no-repeat;
+}
+.our-team-card > div {
+  width: 320px;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+}
+
 /* ----------------------------Media Query---------------------------- */
 
 @media screen and (max-width: 576px) {
@@ -673,7 +795,7 @@ body {
     padding: 0;
     text-wrap: wrap;
   }
-  .banner-title{
+  .banner-title {
     margin-top: 50px;
     font-size: 36px;
   }
@@ -768,7 +890,7 @@ body {
     align-items: flex-start;
     gap: 0;
   }
-  .calculator-left{
+  .calculator-left {
     margin-left: 20px;
     margin-bottom: 40px;
   }
@@ -776,4 +898,6 @@ body {
     gap: 0;
     margin-left: 20px;
   }
+
+  /* Our Team Section */
 }

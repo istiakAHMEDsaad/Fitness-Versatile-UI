@@ -762,6 +762,11 @@ body {
   body {
     object-fit: contain;
     object-position: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
   }
   .banner,
   .navbar {
@@ -841,7 +846,7 @@ body {
 
   /* Run section */
   .run-container-content {
-    border: 1px solid tomato;
+    /* border: 1px solid tomato; */
     flex-direction: column;
     align-items: center;
   }

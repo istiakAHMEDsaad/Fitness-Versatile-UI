@@ -540,7 +540,7 @@ body {
   background-color: #222;
 }
 .calculator-container {
-  border: 5px solid tomato;
+  /* border: 5px solid tomato; */
   max-width: 1440px;
   margin: 0 auto;
   padding: 3.125rem 11.56rem;
@@ -596,6 +596,42 @@ body {
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0.3px;
+  padding-bottom: 30px;
+}
+
+.calculator-right select,
+.calculator-right input[type="text"] {
+  padding-left: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  margin-right: 5px;
+  box-sizing: border-box;
+  border: none;
+}
+#activity {
+  width: calc(400px + (5px * 2));
+}
+#activity,
+#fsex,
+.calculator-right input[type="placeholder"] {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: var(--primary-font);
+  font-weight: 400;
+}
+
+.calculator-right button {
+  padding: 15px 55px;
+  border-radius: 25px;
+  border: none;
+  background-color: rgba(230, 83, 60, 1);
+  font-family: var(--primary-font);
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 1);
 }
 
 /* ----------------------------Media Query---------------------------- */
@@ -618,20 +654,28 @@ body {
   }
   .head {
     width: 100%;
+    padding: 0;
+    margin: 0;
   }
   .navbar {
     flex-direction: row-reverse;
     padding-top: 50px;
-    max-width: 340px;
+    max-width: 500px;
     height: 100%;
     margin: 0 auto;
     padding: calc(340px - 335px);
   }
   .banner-left {
-    max-width: 353px;
+    /* border: 1px solid black; */
+    /* max-width: 353px; */
     height: auto;
     margin: 0 auto;
-    /* border: 1px solid black; */
+    padding: 0;
+    text-wrap: wrap;
+  }
+  .banner-title{
+    margin-top: 50px;
+    font-size: 36px;
   }
 
   /* width: 340px; */
@@ -702,5 +746,34 @@ body {
   }
   .calculator-container {
     padding-left: 20px;
+  }
+
+  /* Calculation Section */
+  .calculator-title-container {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 350px;
+  }
+  .calculator-title {
+    padding-bottom: 30px;
+  }
+  .calculator-container {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    padding: 0;
+    padding-top: 30px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .calculator-left{
+    margin-left: 20px;
+    margin-bottom: 40px;
+  }
+  .calculator-right {
+    gap: 0;
+    margin-left: 20px;
   }
 }

@@ -235,14 +235,34 @@
                     <p>We believe fitness should be accessible to everyone, everywhere, regardless of income or access
                         to a gym. </p>
                     <form action="">
-                        <label for="fname">
-                            <input type="text" id="fname">
+                        <label for="fheight">
+                            <input type="text" id="fheight" name="height"  placeholder="Height/cm">
+                        </label>
+                        <label for="fweight">
+                            <input type="text" name="weight" id="fweight" placeholder="Weight/kg">
+                        </label>
+                        <label for="fage">
+                            <input type="text" name="age" id="fage" placeholder="Age">
+                        </label>
+                        <label for="fsex">
+                            <select name="sex" id="fsex">
+                                <option value="sex"><span>Sex</span></option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </label> <br>
+                        <label id="activity" for="activity">
+                            <select name="activity" id="activity">
+                                <option value="op1">Select an activity factor</option>
+                            </select>
                         </label>
                     </form>
                     <button>
                         <span>Calculate</span>
                     </button>
                 </div>
+
+
             </div>
         </section>
 

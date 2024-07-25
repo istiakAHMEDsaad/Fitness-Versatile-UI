@@ -900,4 +900,9 @@ body {
   }
 
   /* Our Team Section */
+  .our-team-card{
+    /* border: 2px solid tomato; */
+    width: 380px;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
